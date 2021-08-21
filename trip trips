@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+<h1>Dashboard</h1>
+
+		<b>Welcome, {{username}}</b> <form method = "GET" action = "/logout"><button>Logout</button></form>
+
+		<form method="POST" action="/addtrip">
+			<input type="text" name="title" placeholder="Title"><br>
+			<input type="text" name="image" placeholder="Picture"><br>
+			<input type="text" name="dateleave" placeholder="Date of trip"><br>
+			<input type="text" name="datereturn" placeholder="Return date"><br>
+			<button id="submit">Submit a new movie</button><br>
+		</form>
+
+{{#tripslist}}
+<li>
+	<form method = "POST" action = "/deletetrip">
+		{{title}} {{image}} {{dateleave}} {{datereturn}}	<input type = "hidden" value = {{triplisting}} name = "triplisting" />
+		<button>Delete trip</button>
+	</form>
+</li>
+{{/tripslist}}
+	</body>
+</html>
