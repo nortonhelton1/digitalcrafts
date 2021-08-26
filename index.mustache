@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Welcome</h3>
+    <form action="/" method="POST">
+        <input type="text" placeholder="Enter a Veggie or Fruit" name="veggies">
+        <button>ADD Veggie</button>
+        <ul>
+            {{# veggies }}
+            <li>KEY -- {{veggie_id}} -- {{veggies}}</li>
+            {{/ veggies }}
+        </ul>
+    </form>
+    <a href="http://localhost:3000/delete">Delete Page</a>
+    <div id="notes">
+        <h3>Possible Updates</h3>
+        <ul>
+            <li>Update POST</li>
+            <li>Adding some style</li>
+            <li>Create an account and have login features</li>
+            <li>TBD...</li>
+        </ul>
+    </div>
+</body>
+
+</html>

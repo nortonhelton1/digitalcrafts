@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="http://localhost:3000">Root Page</a>
+    <h3>Delete FROM LIST</h3>
+    <form action="/delete" method="POST">
+        <input type="text" placeholder="Type in Key" name="veggie_id">
+        <button>Delete</button>
+    </form>
+    <h3>LIST</h3>
+    <ul>
+        {{# veggies }}
+        <li>KEY -- {{veggie_id}} -- {{veggies}}</li>
+        {{/ veggies }}
+    </ul>
+
+</body>
+
+</html>
